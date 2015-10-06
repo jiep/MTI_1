@@ -1,2 +1,0 @@
-http://lib.stat.cmu.edu/datasets/
-http://www.statsci.org/datasets.html
