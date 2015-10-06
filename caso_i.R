@@ -1,4 +1,4 @@
-# Seleccionamos el archivo
+# Seleccionamos el archivo "hitter.final"
 filename <- file.choose()
 
 # Cargamos los datos del fichero de texto como CSV
@@ -23,7 +23,7 @@ salary <- data$annual_salary_1987
 aux <- as.data.frame(table(homeruns))
 ybar <- aux$Freq
 xbar <- as.character(aux$homeruns)
-barplot(ybar, names.arg=xbar, space=3, col=4, main="Diagrama de barras del número de homeruns 
+barplot(ybar, names.arg=xbar, space=0.5, col=3, main="Diagrama de barras del número de homeruns 
         durante la temporada 1986", xlab="Número de homeruns", ylab="Frecuencia" )
 abline(h=0)
 
@@ -62,11 +62,13 @@ salary_median <- median(salary, na.rm = TRUE)
 
 # Definimos una función para la moda
 mode <- function(x) {
-  aux <- which(ybar == max(ybar, na.rm = TRUE))
-  return x[aux]
+  aux <- as.data.frame(table(x))
+  ybar <- aux$Freq
+  aux2 <- which(ybar == max(ybar, na.rm = TRUE))
+  return (x[aux2])
 }
 
-homeruns_mean <- mode(homeruns);
+homeruns_mode <- mode(homeruns);
 
 #----------------------------------------------------------------------------------------------
 # Medidas de posición
@@ -87,8 +89,8 @@ salary_qvar <- var(salary, na.rm = TRUE)
 
 # Definimos una función para la varianza
 variance <- function(x) {
-  n <- length(x, na.rm = TRUE)
-  return (n-1)*var(x, na.rm = TRUE)/n
+  n <- sum(!is.na(x))
+  return ((n-1)*var(x, na.rm = TRUE)/n)
 }
 
 homeruns_var <- variance(homeruns)
