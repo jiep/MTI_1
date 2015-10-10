@@ -104,6 +104,10 @@ salary_var <- variance(salary)
 homeruns_std = sqrt(var(homeruns, na.rm = TRUE))
 salary_std = sqrt(var(salary, na.rm = TRUE))
 
+# Rango
+homeruns_range <- max(homeruns, na.rm = TRUE) - min(homeruns, na.rm = TRUE)
+salary_range <- max(salary, na.rm = TRUE) - min(salary, na.rm = TRUE)
+
 # Rango intercuartílico
 
 homeruns_iqr <- IQR(homeruns, na.rm = TRUE)
