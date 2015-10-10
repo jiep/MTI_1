@@ -59,9 +59,9 @@
 
 \section{Introducción}
 
-Para la realización de este caso práctico requerimos dos conjuntos de datos: un conjunto cuantitativo discreto y otro cuantitativo continuo. Cuando dispongamos de estos conjuntos de datos procederemos a realizar un análisis descriptivo de cada uno éstos.\\
+Para la realización de este caso práctico requerimos dos conjuntos de datos: un conjunto cuantitativo discreto y otro cuantitativo continuo. Cuando dispongamos de estos conjuntos de datos procederemos a realizar un análisis descriptivo de cada uno de éstos.\\
 
-Para ello, necesitamos encontrar una base de datos que disponga de los conjuntos de datos requeridos anteriormente. La base de datos elegida se centra en el estudio de la liga norteamericana de béisbol de la temporada 1986. Los datos se encuentran disponibles en el siguiente enlace: \url{http://lib.stat.cmu.edu/datasets/baseball.data}\footnote{El archivo se encuentra en forma de ``shell archive'', que es una forma de fichero autoextraíble, en el que se agrupan varios archivos, tanto de datos como descripciones de las variables. Para poder extraer estos ficheros, ejecutaremos en una terminal el comando \textbf{sh} seguido del nombre del fichero. Esto creará cuatro ficheros: \textit{pitcher.final}, \textit{team.final}, \textit{data.des.form}, \textit{hitter.final}. De estos ficheros sólo nos interesan los dos últimos: en el primero se encuentran las descripciones de las variables; y en el segundo, los datos que utilizaremos para nuestro análisis descriptivo.}. En el archivo se encuentran distintos datos relativos a equipos, pitchers y hitters. Nos centraremos en estos últimos. De entre las $24$ variables disponibles en el fichero utilizaremos como variable cuantitativa discreta el número de homeruns durante la temporada 1986, y como variable cuantitativa continua el salario (en miles de dólares) al comienzo de la temporada 1987.  
+Para ello, necesitamos encontrar una base de datos que disponga de los conjuntos de datos requeridos anteriormente. La base de datos elegida se centra en el estudio de la liga norteamericana de béisbol de la temporada 1986. Los datos se encuentran disponibles en el siguiente enlace: \url{http://lib.stat.cmu.edu/datasets/baseball.data}\footnote{El archivo se encuentra en forma de ``shell archive'', que es una forma de fichero autoextraíble, en el que se agrupan varios archivos, tanto de datos como descripciones de las variables. Para poder extraer estos ficheros, ejecutaremos en una terminal el comando \textbf{sh} seguido del nombre del fichero. Esto creará cuatro ficheros nuevos: \textit{pitcher.final}, \textit{team.final}, \textit{data.des.form}, \textit{hitter.final}. De estos ficheros sólo nos interesan los dos últimos: en el primero se encuentran las descripciones de las variables; y en el segundo, los datos que utilizaremos para nuestro análisis descriptivo.}. En el archivo se encuentran distintos datos relativos a equipos, pitchers y hitters. Nos centraremos en estos últimos. De entre las $24$ variables disponibles en el fichero utilizaremos como variable cuantitativa discreta el número de homeruns durante la temporada 1986, y como variable cuantitativa continua el salario (en miles de dólares) al comienzo de la temporada 1987.  
 
 \section{Análisis descriptivo de un conjunto de datos cuantitativos discretos}
 
@@ -82,12 +82,12 @@ Si realizamos el diagrama de sectores (Figura~\ref{fig:diagrama_sector_homeruns}
 
 \begin{figure}[tbph!]
 \centering
-\includegraphics[width=0.8\linewidth]{imagenes/diagrama_sectores_homeruns}
+\includegraphics[width=\linewidth]{imagenes/diagrama_sectores_homeruns}
 \caption{Diagrama de sectores para el número de homeruns}
 \label{fig:diagrama_sector_homeruns}
 \end{figure}
 
-Para asegurarnos de que lo visto en los gráficos anteriores se corresponde con la realidad de los datos, calcualremos una serie de medidas de distintos tipos: de centralización, de posición y de dispersión. \\
+Para asegurarnos de que lo visto en los gráficos anteriores se corresponde con la realidad de los datos, calcularemos una serie de medidas de distintos tipos: de centralización, de posición y de dispersión. \\
 
 Las medidas de centralización que consideraremos son la media aritmética, la mediana y la moda. Estas medidas son:
 
@@ -133,7 +133,7 @@ Las medidas de dispersión son la varianza y la cuasivarianza, la desviación es
 \end{tabular} 
 \end{table}
 
-De los resultados anteriores vemos que la varianza es muy elevada, lo que hace haya gran variabilidad de los datos. El rango también es muy grande debido a todos los posibles valores que toman los datos: entre $0$ y $40$.\\
+De los resultados anteriores vemos que la varianza es muy elevada, lo que hace que haya gran variabilidad de los datos. El rango también es muy grande debido a todos los posibles valores que toman los datos: entre $0$ y $40$.\\
 
 Con el rango intercuartílico podemos obtener el diagrama de cajas (Figura~\ref{fig:diagrama_cajas_homeruns}). Podemos observar que el rango intercuartílico se sitúa entre $4$ y $16$ homeruns y la mediana es de $8$ homeruns. Hay que destacar que hay dos datos atípicos, por lo que conseguir $35$ ó $40$ homeruns es poco común en los jugadores de la temporada 1986.\\
 
@@ -155,7 +155,7 @@ Por último, calculamos las medidas de asimetría y el curtosis. Los datos se mu
 \end{tabular} 
 \end{table}
 
-Puesto que el coeficiente de asimetría es mayor que cero, tenemos asimtería a la derecha. Con respecto al curtosis, tenemos una distribución de los datos casi normal ya es práctica cero.
+Puesto que el coeficiente de asimetría es mayor que cero, tenemos asimetría a la derecha. Con respecto al curtosis, tenemos una distribución de los datos casi normal ya es práctica cero.
 
 \newpage 
 
@@ -295,7 +295,7 @@ Por último, calculamos las medidas de asimetría y el curtosis. Los datos se mu
 \end{tabular} 
 \end{table}
 
-Puesto que el coeficiente de asimetría es mayor que cero, tenemos asimtería a la derecha. Con respecto al curtosis, tenemos una distribución de los datos leptocúrtica. 
+Puesto que el coeficiente de asimetría es mayor que cero, tenemos asimetría a la derecha. Con respecto al curtosis, tenemos una distribución de los datos leptocúrtica. 
 
 
 \section{Conclusiones}
